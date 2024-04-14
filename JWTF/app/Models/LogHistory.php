@@ -9,7 +9,7 @@ class LogHistory extends Model
 {
     use HasFactory;
     protected $connection = 'mongodb';
-    protected $collection = 'log_history';
+    protected $collection = 'data-sensores';
 
     public function user()
     {

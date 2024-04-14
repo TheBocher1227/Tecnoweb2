@@ -12,19 +12,19 @@ use Illuminate\Support\Facades\Log;
 class LogHistoryController extends Controller
 {
 
-    public function index()
+ public function index()
 {
-    $logs = LogHistory::all();
+    $logs = LogHistory::all(
     $logs = $logs->map(function ($log) {
         $usuario = User::find($log->user_id); 
         return [
             "id" => $log->_id,
-            "metodo" => $log->metodo,
-            "ruta" => $log->ruta,
-            "usuario" => $usuario ? $usuario->name : 'Usuario no encontrado', 
-            "fecha" => $log->fecha,
+            "nombre" => $log->nombre,
+            "unidad" => $log->unidad,
+            "clave" => $log->clave,
+            "descripcion" => $log->descripcion,
             "tablas" => $log->tablas,
-            "data" => $log->data
+            "data" => $log->isf
         ];
     });
     return response()->json($logs, 200);
