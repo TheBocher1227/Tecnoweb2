@@ -14,7 +14,7 @@ class LogHistoryController extends Controller
 
  public function index()
 {
-    $logs = LogHistory::all(
+    $logs = LogHistory::all();
     $logs = $logs->map(function ($log) {
         $usuario = User::find($log->user_id); 
         return [
