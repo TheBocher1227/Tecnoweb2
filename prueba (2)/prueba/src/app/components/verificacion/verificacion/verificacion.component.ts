@@ -34,7 +34,8 @@ export class VerificacionComponent {
       next: (response) => {
         console.log(response);
         this.mensaje = response.message;
-        this.router.navigateByUrl('/index', { replaceUrl: true });
+        this.router.navigateByUrl('/index/info', { replaceUrl: true });
+        console.log("Por aqui si pasa ");
       },
       error: (error) => {
         console.error(error);
