@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Log;
 class LogHistoryController extends Controller
 {
 
-    public function index()
+ public function index()
 {
     $logs = LogHistory::all();
     
