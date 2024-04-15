@@ -54,6 +54,11 @@ export class LoginService {
     const url = 'http://127.0.0.1:8000/api/auth/verify';
     return this.http.post<any>(url, { token });
   }
+
+  me(token: string): Observable<any> {
+    const url = 'http://127.0.0.1:8000/api/auth/me';
+    return this.http.post<any>(url, { token });
+  }
   
 
 }

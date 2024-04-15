@@ -108,7 +108,7 @@ class AuthController extends Controller
      */
     public function me()
     {
-        return response()->json(["user"=>auth()->user(),"checando avr si es asi"=> auth()->user()->role_id]);
+        return response()->json(["user"=>auth()->user()]);
     }
 
     /**
